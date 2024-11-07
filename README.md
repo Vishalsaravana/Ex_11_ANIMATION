@@ -300,3 +300,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 ## RESULT
+    Thus a Simple Android Application develop a program to create animations in Android Studio is developed and executed successfully. 
