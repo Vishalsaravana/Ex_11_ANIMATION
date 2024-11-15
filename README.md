@@ -38,39 +38,30 @@ Registeration Number : 212222040181
 
 ```
 package com.example.ex_9;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.view.View;
-
-
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
     public void clockwise(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.myanimation);
         image.startAnimation(animation);
     }
-
     public void zoom(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.clockwise);
         image.startAnimation(animation1);
     }
-
     public void fade(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation1 =
@@ -78,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                         R.anim.fade);
         image.startAnimation(animation1);
     }
-
     public void blink(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation1 =
@@ -86,9 +76,6 @@ public class MainActivity extends AppCompatActivity {
                         R.anim.blink);
         image.startAnimation(animation1);
     }
-
-
-
     public void slide(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation1 =
@@ -112,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
     android:paddingTop="20dp"
     android:paddingBottom="20dp"
     tools:context=".MainActivity">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -122,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="20dp"
@@ -144,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_alignParentStart="true"
         android:layout_marginTop="40dp"
         android:onClick="clockwise"/>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -153,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_alignTop="@+id/button"
         android:layout_centerHorizontal="true"
         android:onClick="zoom"/>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -173,8 +156,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_below="@+id/button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-
     <Button
         android:id="@+id/button6"
         android:layout_width="119dp"
@@ -187,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_toRightOf="@+id/textView"
         android:onClick="slide"
         android:text="slide" />
-
 </RelativeLayout>
 ```
 
@@ -219,7 +199,6 @@ public class MainActivity extends AppCompatActivity {
         android:pivotX="50%"
         android:pivotY="50%" >
     </scale>
-
     <scale xmlns:android="http://schemas.android.com/apk/res/android"
         android:startOffset="5000"
         android:fromXScale="3.0"
@@ -237,7 +216,6 @@ public class MainActivity extends AppCompatActivity {
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
-
     <rotate xmlns:android="http://schemas.android.com/apk/res/android"
         android:fromDegrees="0"
         android:toDegrees="360"
@@ -245,7 +223,6 @@ public class MainActivity extends AppCompatActivity {
         android:pivotY="50%"
         android:duration="5000" >
     </rotate>
-
     <rotate xmlns:android="http://schemas.android.com/apk/res/android"
         android:startOffset="5000"
         android:fromDegrees="360"
@@ -262,18 +239,15 @@ public class MainActivity extends AppCompatActivity {
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:interpolator="@android:anim/accelerate_interpolator">
-
     <alpha
         android:duration="1000"
         android:fromAlpha="0"
         android:toAlpha="1" />
-
     <alpha
         android:duration="1000"
         android:fromAlpha="1"
         android:startOffset="2000"
         android:toAlpha="0" />
-
 </set>
 ```
 
@@ -295,8 +269,6 @@ public class MainActivity extends AppCompatActivity {
 
 ![Screenshot from 2024-11-07 11-41-28](https://github.com/user-attachments/assets/a0085ac1-cb28-4be4-9f31-904b0d7b44a8)
 ![Screenshot from 2024-11-07 11-42-01](https://github.com/user-attachments/assets/20d8178e-cb5a-4010-849f-d296826bb2de)![Screenshot from 2024-11-07 11-42-31](https://github.com/user-attachments/assets/1f49562a-5b52-498a-bb1d-900aa3c2b5b3)
-
-
 
 
 ## RESULT
